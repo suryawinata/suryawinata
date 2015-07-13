@@ -343,7 +343,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #home {
-	background: url(../images/cover.jpg);
+	background: url(../images/cover.jpeg);
 	background-color: #222;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -394,7 +394,7 @@ textarea.form-control {
 }
 
 /* ---------------------------------------------- /*
- * Servise
+ * Services
 /* ---------------------------------------------- */
 
 .iconbox {
@@ -403,6 +403,15 @@ textarea.form-control {
 	text-align: center;
 	padding: 40px 20px;
 	margin: 0 0 20px;
+	box-shadow: 0 0 8px #fff;
+}
+.iconbox:hover{
+	border-color: #ccc;
+	-webkit-transition: box-shadow ease-out 200ms;
+    -moz-transition: box-shadow ease-out 200ms;
+    -o-transition: box-shadow ease-out 200ms;
+    transition: box-shadow ease-out 200ms;
+	box-shadow: 0 0 8px #ccc;
 }
 
 .iconbox-icon {
@@ -554,7 +563,6 @@ textarea.form-control {
 .navbar-custom .navbar-brand {
 	font-weight: 700;
 	font-size: 22px;
-    font-family: Lobster, cursive;
 }
 
 .navbar-custom .dropdown-menu {
@@ -733,7 +741,6 @@ textarea.form-control {
 	min-width: 100%;
 	max-width: 100%;
 	height: auto;
-	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
 }
@@ -753,6 +760,7 @@ textarea.form-control {
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	opacity: 0;
 }
 
 .grid figure figcaption::before,
@@ -801,19 +809,21 @@ textarea.form-control {
 /*---------------*/
 /***** Bubba *****/
 /*---------------*/
-
-figure.effect-bubba {
-	background: #9e5406;
-}
-
-figure.effect-bubba img {
-	opacity: 0.7;
+.grid figure:hover figcaption{
+	opacity: 1;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
+figure.effect-bubba img {
+	opacity: 1;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	height: 350px;
+	width: 100%
+}
 
 figure.effect-bubba:hover img {
-	opacity: 0.4;
+	opacity: 0.1;
 }
 
 figure.effect-bubba figcaption::before,
@@ -830,15 +840,15 @@ figure.effect-bubba figcaption::after {
 }
 
 figure.effect-bubba figcaption::before {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
 	-webkit-transform: scale(0,1);
 	transform: scale(0,1);
 }
 
 figure.effect-bubba figcaption::after {
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
 	-webkit-transform: scale(1,0);
 	transform: scale(1,0);
 }
@@ -849,7 +859,6 @@ figure.effect-bubba h2 {
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,-20px,0);
 	transform: translate3d(0,-20px,0);
-    color: #fff;
 }
 
 figure.effect-bubba p {
@@ -873,6 +882,7 @@ figure.effect-bubba:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+    color: #000;
 }
 
 /*-----------------------*/
@@ -968,4 +978,6 @@ figure.effect-bubba:hover p {
 	}
 
 }
+
+
 
